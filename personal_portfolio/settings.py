@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8vv6*#r6t*in9+^ej#-uu1pio3)buzso#8bmq_a2nfrh*pr4__
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'www.shabiasaeed.com', 'https://www.shabiasaeed.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['www.shabiasaeed.com']
 
 
 # Application definition
@@ -119,9 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#STATIC_URL = '/static/'
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = BASE_DIR / 'media'
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 try:
     from .local_settings import *
