@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8vv6*#r6t*in9+^ej#-uu1pio3)buzso#8bmq_a2nfrh*pr4__
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.shabiasaeed.com', '*']
+ALLOWED_HOSTS = ['www.shabiasaeed.com']
 
 
 # Application definition
@@ -123,10 +123,10 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-try:
-    from .local_settings import *
-except ImportError:
-    print("Looks like no local file. You must be on production")
+#try:
+    #from .local_settings import *
+#except ImportError:
+    #print("Looks like no local file. You must be on production")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
