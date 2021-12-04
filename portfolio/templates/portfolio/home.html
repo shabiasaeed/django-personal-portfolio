@@ -2,6 +2,7 @@
 {% block content %}
 
     {% load static %}
+
     <div class="row justify-content-center my-3">
     <div class="col-5">
     <img src="{% static 'portfolio\MiniMe.jpg' %}" class="img-fluid">
@@ -9,13 +10,16 @@
 </div>
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
-    <h2 id="hometext" class="font-weight-bold">Hello, I'm Shabia Saeed. I'm a second year Software Engineering student at Concordia University</h2>
+    <h2 id="hometext" class="font-weight-bold">Hello, I'm Shabia.</h2>
+    <h6 id="hometext" class="font-weight-bold">I'm a second year software engineering student at concordia university</h6>
   </div>
 </div>
+
 
 <h2 class="mt-5">Projects</h2>
 <hr>
 <div class="row">
+
   {% for project in projects %}
   <div class="col-lg-4 col-md-6">
 
@@ -31,9 +35,19 @@
 
     <p class="lowercase" style="font-family: Serif">{{ project.description }}</p>
 
-
-
   </div>
+
   {% endfor %}
+
+      <footer>
+        <h6>&copy; 2021 shabia saeed. all rights reserved.</h6>
+      </footer>
+
+
+
 </div>
+
+
+
+
 {% endblock %}

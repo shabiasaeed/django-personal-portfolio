@@ -6,14 +6,41 @@
     color: rgba(0,0,0,.5) !important;
 }
 
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+  /* min-height: calc(100vh - 211px - 58px); */
+}
+
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0%
+  /* position: fixed;
+  z-index: 1; */
+}
+
+
 body {
     font-family: 'Mate SC', serif;
+    position: relative;
+    padding-bottom: 58px;
+    min-height: 100vh;
 }
 
 
 #blogtitle {
     font-size: 6rem;
 }
+
 
 @media (min-width: 992px) {
     #hometext {
@@ -22,4 +49,5 @@ body {
     #blogdetailtitle {
         font-size: 5rem;
     }
+
 }
