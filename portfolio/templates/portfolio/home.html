@@ -1,52 +1,108 @@
 {%  extends 'portfolio/base.html' %}
+{% block nav_item_home %}active{% endblock nav_item_home %}
 {% block content %}
 
     {% load static %}
+    <div class="row">
+        <br/>
+    </div>
 
     <div class="row justify-content-center my-3">
-    <div class="col-5">
-    <img src="{% static 'portfolio\MiniMe.jpg' %}" class="img-fluid">
-  </div>
-</div>
+    <img src="{% static 'portfolio\MiniMe.jpg' %}" style="width:550px;height:370px;">
+    </div>
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
     <h2 id="hometext" class="font-weight-bold">Hello, I'm Shabia.</h2>
-    <h6 id="hometext" class="font-weight-bold">I'm a second year software engineering student at concordia university</h6>
+    <hr style="border-bottom:#454545 solid medium">
+    <h5 class="capitalize">I'm a software engineer that welcomes challenges and architects solutions. <br>I strive to design, build, and deliver reliable products.</h5>
   </div>
 </div>
-
 
 <h2 class="mt-5">Projects</h2>
 <hr>
 <div class="row">
-
   {% for project in projects %}
   <div class="col-lg-4 col-md-6">
-
     {% if project.url %}
     <a href="{{ project.url }}">
       <img src="{{ project.image.url }}" class="img-fluid mb-2">
     </a>
     {% else %}
-
     <img src="{{ project.image.url }}" class="img-fluid mb-2">
     {% endif %}
     <h3>{{ project.title }}</h3>
-
     <p class="lowercase" style="font-family: Serif">{{ project.description }}</p>
-
   </div>
 
   {% endfor %}
 
-      <footer>
-        <h6>&copy; 2021 shabia saeed. all rights reserved.</h6>
-      </footer>
-
-
-
 </div>
 
+<h2 class="mt-5">Design Projects</h2>
+<hr>
+<div class="container">
+    <div class="photo-gallery">
+
+                    <div class="column">
+                        <div class="photo">
+                            <img src="{% static 'portfolio\Wallpaper.png' %}" alt="">
+                            <div class="overlay">
+                                <h5 class="frame-title">iphone Wallpaper</h5>
+                            </div>
+                        </div>
+                         <div class="photo">
+                            <img src="{% static 'portfolio\Frame.png' %}" alt="">
+                            <div class="overlay">
+                                <h5 class="frame-title">Favorites Frame</h5>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'portfolio\Card.png' %}" alt="" style="width: 481px; height: 383px;">
+                            <div class="overlay">
+                                <h5 class="frame-title">Mother's Day Card</h5>
+                            </div>
+                        </div>
+                        <div class="photo">
+                            <img src="{% static 'portfolio\Pizza.png' %}" alt="" style="width: 481px; height: 383px;">
+                            <div class="overlay">
+                                <h5 class="frame-title">Pizza Menu</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="column">
+                        <div class="photo">
+                            <img src="{% static 'portfolio\Web.png' %}" alt="">
+                            <div class="overlay">
+                                <h5 class="frame-title">Blogscape</h5>
+                            </div>
+                        </div>
+
+                        <div class="photo">
+                            <img src="{% static 'portfolio\Music.png' %}" alt="" style="width: 644px; height: 566px;">
+                            <div class="overlay">
+                                <h5 class="frame-title">Music Player</h5>
+                            </div>
+                        </div>
+
+                           <div class="photo">
+                            <img src="{% static 'portfolio\Shop.png' %}" alt="" style="width: 644px; height: 566px;">
+                            <div class="overlay">
+                                <h5 class="frame-title">Signboard</h5>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <h6>&copy; 2024 shabia saeed. all rights reserved.</h6>
+</footer>
 
 
 
